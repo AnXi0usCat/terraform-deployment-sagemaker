@@ -22,11 +22,11 @@ variable "endpoint_name" {
 
 # both models should have an execution role
 variable "model_arn_1" {
-   default = "arn:aws:iam::877472877532:role/service-role/AmazonSageMaker-ExecutionRole-20190903T151303"
+   default = ""
 }
 
 variable "model_arn_2" {
-   default = "arn:aws:iam::877472877532:role/service-role/AmazonSageMaker-ExecutionRole-20190903T151303"
+   default = ""
 }
 
 # each model must point to a docker image which will be used for creating an endpoint
