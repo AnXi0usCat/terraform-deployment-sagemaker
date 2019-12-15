@@ -22,11 +22,11 @@ variable "endpoint_name" {
 
 # both models should have an execution role
 variable "model_arn_1" {
-   default = ""
+   default = "arn:aws:iam::877472877532:role/service-role/AmazonSageMaker-ExecutionRole-20190903T151303"
 }
 
 variable "model_arn_2" {
-   default = ""
+   default = "arn:aws:iam::877472877532:role/service-role/AmazonSageMaker-ExecutionRole-20190903T151303"
 }
 
 # each model must point to a docker image which will be used for creating an endpoint
@@ -46,3 +46,16 @@ variable "model_location_1" {
 variable "model_location_2" {
    default = "s3://model-bucket-test-1234567/card-fraud-example/output/linear-learner-2019-11-01-16-36-25-946/output/model.tar.gz"
 }
+
+variable "function_name" {
+  default = "minimal_lambda_function"
+}
+
+variable "handler" {
+  default = "lambda.lambda_handler"
+}
+
+variable "runtime" {
+  default = "python3.6"
+}
+
